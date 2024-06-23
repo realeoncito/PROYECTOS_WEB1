@@ -1,0 +1,153 @@
+<!--
+    Desarrolla un documento HTML bien formado que incluya un encabezado sobre la 
+    "Formación de Grupos para Asistir al Congreso Juvenil Católico en Corea" y una 
+    breve invitación para que los jóvenes se unan a un grupo que asistirá al congreso. 
+    Además, agrega tres párrafos de contenido relacionado con el congreso y un formulario 
+    que capture seis campos: cuatro input, un select y un textarea.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congreso Juvenil Católico en Corea</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Formación de Grupos para Asistir al Congreso Juvenil Católico en Corea</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#InfoGeneral">Información General del Evento</a></li>
+                <li><a href="#Formulario">Recopilación de Datos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>
+            Estimado joven católico, no pierdas la oportunidad de asistir a este enorme evento eucarístico en el que se
+            compartirá
+            con personas de alrededor del mundo
+        </p>
+        <p>
+            Anímate y se parte del grupo de hondureños que viajarán a Coreo a vivir una experiencia inolvidable en
+            tierras asiáticas. <br />
+            Si estás interesado, completa el <a href="#Formulario">formulario</a> con tus datos y nos pondremos en
+            contacto contigo.
+        </p>
+        <section>
+            <h2 id="InfoGeneral">Información General</h2>
+            <picture>
+                <source srcset="https://placehold.co/380x380" media="(max-width:719px)">
+                <source srcset="https://placehold.co/780x480" media="(max-width:1023px)">
+                <img src="https://placehold.co/1024x720" alt="Conferencia Episcopal de Corea">
+            </picture>
+            <br />
+            <p>
+                
+                El Congreso Juvenil Católico en Corea es un evento significativo que reúne a 
+                jóvenes católicos de diversas regiones del país, así como a visitantes 
+                internacionales, con el propósito de fortalecer su fe y fomentar una 
+                comunidad global de creyentes. Este congreso, organizado por la 
+                Conferencia Episcopal de Corea, ofrece una variedad de actividades, 
+                incluyendo misas, talleres, y sesiones de reflexión, que están diseñadas 
+                para inspirar y motivar a los jóvenes a vivir su fe de manera más profunda 
+                y comprometida.
+            </p>
+
+            <p>
+                Durante el congreso, los participantes tienen la oportunidad de escuchar a 
+                oradores inspiradores, incluidos líderes religiosos, teólogos y activistas 
+                sociales, que comparten sus experiencias y conocimientos sobre diversos 
+                temas de interés para la juventud católica. Estos temas abarcan desde la 
+                espiritualidad y la oración hasta cuestiones sociales y éticas, 
+                proporcionando a los jóvenes herramientas valiosas para enfrentar 
+                los desafíos modernos desde una perspectiva cristiana. Además, el congreso 
+                promueve el intercambio cultural y la solidaridad, permitiendo a los jóvenes 
+                conocer y aprender de las experiencias de sus pares de diferentes partes del 
+                mundo.
+            </p>
+
+            <p>
+                El impacto del Congreso Juvenil Católico en Corea se extiende más allá de los 
+                días del evento, ya que los participantes regresan a sus comunidades locales 
+                con una renovada energía y compromiso hacia su fe y servicio. Las experiencias 
+                y conocimientos adquiridos durante el congreso les permiten desempeñar un papel 
+                más activo en sus parroquias y en la sociedad en general, promoviendo los valores 
+                del evangelio y contribuyendo al bienestar común. Este congreso no solo fortalece 
+                la identidad católica de los jóvenes, sino que también les ayuda a convertirse en 
+                líderes capaces de influir positivamente en su entorno.
+
+            </p>
+        </section>
+
+        <br />
+        <section>
+            <h2 id="Formulario">Recopilación de Datos</h2>
+            <!--Se enviara con metodo GET para poder visualizar los att clave valor en la url del request.-->
+            <form action="Examen.html" method="get">
+
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="txtNombreCompleto">Nombre</label><br />
+                    <input id="txtNombreCompleto" required name="NombreCompleto" type="text" placeholder="Nombre Completo"/> <br /><br />
+                    <label for="txtEmail">Correo Electrónico</label><br />
+                    <input id="txtEmail" required name="Email" type="text" pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" placeholder="correo@dominio.xxx" /> <br /><br />
+                    <label for="txtTelefono">Telefono</label><br />
+                    <input id="txtTelefono" required name="Telefono" type="text" placeholder="99887766" /> <br /><br />
+                    <label for="txtMunicipio">Municipio</label><br />
+                    <input id="txtMunicipio" required name="Municipio" type="text" placeholder="Municipio de residencia" /> <br /><br />
+
+                    <label for="cmbDepto">Departamento</label> <br/>
+                    <select id="cmbDepto" name="Departamento">
+                        <option value="1">Atlántida</option>
+                        <option value="2">Colón</option>
+                        <option selected value="3">Comayagua</option>
+                        <option value="4">Copán</option>
+                        <option value="5">Cortés</option>
+                        <option value="6">Choluteca</option>
+                        <option value="7">El Paráiso</option>
+                        <option value="8">Francismo Morazán</option>
+                        <option value="9">Gracias a Dios</option>
+                        <option value="10">Intibucá</option>
+                        <option value="11">Islas de la Bahía</option>
+                        <option value="12">La Paz</option>
+                        <option value="13">Lempira</option>
+                        <option value="14">Ocotepeque</option>
+                        <option value="15">Olancho</option>
+                        <option value="16">Santa Bárbara</option>
+                        <option value="17">Valle</option>
+                        <option value="18">Yoro</option>
+                    </select>
+                </fieldset>
+                <br/>
+                <fieldset>
+                    <legend>Motivo</legend>
+                    <label for="txtMotivo">¿Por qué quieres asistir?</label> <br/> <br/>
+                    <textarea id="txtMotivo" name="Motivos" required placeholder="Explica las razones o motivos por las cuales deseas asistir a este evento" cols="40"
+                    ></textarea>
+                </fieldset>
+
+                <br />
+                <button type="submit">Enviar respuesta</button>
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Atrévete a ser parte de esta experiencia inolvidable. <br />
+            Jóvenes Católicos Honduras
+        </p>
+    </footer>
+
+</body>
+
+</html>

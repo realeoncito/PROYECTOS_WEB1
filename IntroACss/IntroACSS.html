@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a CSS</title>
+
+    <!--Bloque definido para establecer style-->
+    <style>
+        p {
+            color: red;
+            font-size: 1.1rem;
+        }
+    </style>
+
+    <!--Importacion de estilos-->
+    <link rel="stylesheet" href="css/PrimerCSS.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="https://placehold.co/64x64" alt="logo" />
+            <h1>CURSO DE PORTALES WEB I</h1>
+        </div>
+        <NAV>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Javascript</a></li>
+            </ul>
+        </NAV>
+    </header>
+
+    <main>
+        <h2>CSS a 3 formas en Documento HTML</h1>
+            <!--No se recomienda, es la primera que surgio de CSS
+    No se recomienda para elementos repetitivos, ejemplo tener 5 elementos 
+    que van en distintas secciones.
+
+    -->
+
+            <!--Si se va a aplicar a un elemento en especifico. -->
+            <h2>Estilos INLINE</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem omnis consectetur sequi a libero
+                nobis maxime at, minus numquam qui quia sit pariatur id iure consequuntur voluptas nihil in molestiae.
+            </p>
+
+            <p style="background-color: black; color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                In dolore, commodi magni sequi quibusdam reprehenderit dolorem aperiam culpa placeat sed autem veniam
+                temporibus voluptates dolores. Nisi quod voluptatibus odio explicabo.</p>
+
+
+            <h2>CSS por medio de bloque style</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis architecto modi obcaecati maxime
+                libero voluptatibus similique! Iusto possimus error magni dolorem optio accusamus veritatis eius magnam
+                tempora nihil, soluta voluptatibus.</p>
+
+            <h2>Tercera forma de CSS archivos css ligados</h2>
+
+            <section class="precios">
+                <div class="card">
+                    <h3>Precio A</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa in odio et, totam dolore ipsa modi. Quas perspiciatis aut atque ullam natus consectetur facere corporis illum blanditiis! Veniam, laborum delectus. A</p>
+                    <span>100.0</span>
+                    <form>
+                        <button>Subscribe</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <h3>Precio B</h3>
+                    <p>Small Description B</p>
+                    <span>150.0</span>
+                    <form>
+                        <button>Subscribe</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <h3>Precio C</h3>
+                    <p>Small Description C</p>
+                    <span>200.0</span>
+                    <form>
+                        <button>Subscribe</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+
+</body>
+
+</html>
