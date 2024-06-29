@@ -1,0 +1,130 @@
+.animation{
+    /*Declaro un nuevo plano cartesiano*/
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.animation .progress-circle{
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    /*Si va a repetir el mismo ciclo*/
+    animation: goRight 5s infinite;
+    background-image: conic-gradient(red, green, blue);
+}
+
+@keyframes goRight{
+    0%{
+        top: 80%;
+        right: 100%;
+        background-image:conic-gradient(red, green, blue) ;
+    }
+    20%{
+        top: 80%;
+        right: 70%
+    }
+    22%{
+        top: 50%;
+        right: 70%;
+        background-image:conic-gradient(blue, red, green) ;
+        transform: rotate(45deg);
+    }
+    25%{
+        top: 80%;
+        right: 70%;
+        transform: rotate(180deg);
+    }
+    50%{
+        top: 80%;
+        right: 80%;
+        background-image:conic-gradient(green, blue, red) ;
+        transform: rotate(0deg);
+    }
+    100%{
+        top: 100%;
+        right: 0%;
+        background-image:conic-gradient(red, green, blue) ;
+    }
+}
+
+/*=================LOADING ANIMATION=======================*/
+/*MODAL ES UNA PANTALLA QUE NOS PERMITE ELEVAR ELEMENTOS ENCIMA DE*/
+.progressModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.744);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressModal .circle-loading{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-top-color: rgb(190, 134, 29);
+    border-top-style: dashed;
+   /* animation: rotate360 1s ease-in-out infinite;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressModal .dancing-dots{
+    /*Definir como se van a ubicar*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 60%;
+    height: 60%;
+}
+
+.progressModal .dancing-dots .circle{
+    width: 16px;
+    height: 16px;
+    background-color: rgb(190, 134, 29);
+    border-radius: 50%;
+    animation: Bounce 0.5s ease-in-out infinite;
+}
+
+.progressModal .dancing-dots .circle:nth-child(2){
+    animation-delay: 0.33s;
+}
+
+.progressModal .dancing-dots .circle:nth-child(3){
+    animation-delay: 0.66s;
+}
+
+@keyframes Bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotate360{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
